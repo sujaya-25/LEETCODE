@@ -1,0 +1,22 @@
+class Solution(object):
+    def maxVowels(self, s, k):
+        v = "aeiou"
+        c = 0
+
+        for i in range(k):
+            if s[i] in v:
+                c += 1
+
+        m = c
+
+        for i in range(k, len(s)):
+            if s[i] in v:
+                c += 1
+
+            if s[i-k] in v:
+                c -= 1
+
+            if c > m:
+                m = c
+
+        return m
