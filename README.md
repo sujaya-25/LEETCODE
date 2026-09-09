@@ -40,3 +40,6 @@ To consistently practice DSA, improve problem-solving skills, and prepare for so
 ---
 
 More solutions will be added as I continue practicing.
+## 🔗 LeetCode Profile
+
+[View my LeetCode Profile](https://leetcode.com/u/sujayaks/)
