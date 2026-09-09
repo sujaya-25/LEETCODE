@@ -1,5 +1,5 @@
-class Solution:
-    def sortArrayByParity(self, nums: List[int]) -> List[int]:
+class Solution(object):
+    def sortArrayByParity(self, nums):
         ev=[]
         od=[]
         for i in range(len(nums)):
@@ -9,5 +9,4 @@ class Solution:
                 od.append(nums[i])
         ev.extend(od)
         return ev
-        
         
