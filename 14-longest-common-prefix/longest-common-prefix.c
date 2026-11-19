@@ -1,16 +1,14 @@
+#include <string.h>
+
 char* longestCommonPrefix(char** strs,int strsSize){
-    int i=0;
-    while(1){
-        char ch=strs[0][i];
-        if(ch=='\0'){
-            return strs[0];
+    int len=strlen(strs[0]);
+
+    for(int i=1;i<strsSize;i++){
+        while(strncmp(strs[0],strs[i],len)!=0){
+            len--;
         }
-        for(int j=1;j<strsSize;j++){
-            if(strs[j][i]!=ch){
-                strs[0][i]='\0';
-                return strs[0];
-            }
-        }
-        i++;
     }
+
+    strs[0][len]='\0';
+    return strs[0];
 }
